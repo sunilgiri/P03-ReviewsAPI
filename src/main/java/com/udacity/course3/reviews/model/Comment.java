@@ -20,7 +20,6 @@ public class Comment {
     private String text;
 
     @ManyToOne
-    @NotNull
     private Review review;
 
     public Comment() {

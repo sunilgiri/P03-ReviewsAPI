@@ -25,7 +25,6 @@ public class Review {
     private Timestamp date;
 
     @ManyToOne()
-    @NotNull
     private Product product;
 
 

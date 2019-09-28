@@ -22,9 +22,7 @@ import java.util.List;
 @RequestMapping("/comments")
 public class CommentsController {
 
-    // TODO: Wire needed JPA repositories here
-
-    @Autowired
+   @Autowired
     CommentRepo commentRepo;
 
     @Autowired

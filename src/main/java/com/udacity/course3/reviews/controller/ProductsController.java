@@ -21,7 +21,7 @@ import java.util.List;
 @RequestMapping("/products")
 public class ProductsController {
 
-   @Autowired
+    @Autowired
     ProductRepo productRepo;
 
     /**
@@ -34,7 +34,6 @@ public class ProductsController {
     public ResponseEntity<?> createProduct(@Valid @RequestBody Product product) {
 
         return ResponseEntity.ok(productRepo.save(product));
-        // throw new HttpServerErrorException(HttpStatus.NOT_IMPLEMENTED);
     }
 
     /**
@@ -55,7 +54,6 @@ public class ProductsController {
             throw new ProductNotFoundException();
         }
 
-        //   throw new HttpServerErrorException(HttpStatus.NOT_IMPLEMENTED);
     }
 
     /**
@@ -66,8 +64,7 @@ public class ProductsController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public List<?> listProducts() {
 
-       return (List<Product>) productRepo.findAll();
+        return (List<Product>) productRepo.findAll();
 
-        //throw new HttpServerErrorException(HttpStatus.NOT_IMPLEMENTED);
     }
 }

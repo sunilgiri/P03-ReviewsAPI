@@ -81,7 +81,7 @@ public class CommentRepoTests {
 
         Comment comment = new Comment();
         comment.setText("Just another comment");
-        comment.setLoginId("sunilgiri");
+        comment.setLogin("sunilgiri");
 
         return comment;
 

@@ -22,7 +22,7 @@ import java.util.List;
 @RequestMapping("/comments")
 public class CommentsController {
 
-   @Autowired
+    @Autowired
     CommentRepo commentRepo;
 
     @Autowired
@@ -39,7 +39,6 @@ public class CommentsController {
     @RequestMapping(value = "/reviews/{reviewId}", method = RequestMethod.POST)
     public ResponseEntity<?> createCommentForReview(@PathVariable Long reviewId,
             @Valid @RequestBody Comment comment) {
-        // throw new HttpServerErrorException(HttpStatus.NOT_IMPLEMENTED);
 
         Optional<Review> review = reviewRepo.findById(reviewId);
 
@@ -63,7 +62,6 @@ public class CommentsController {
     @RequestMapping(value = "/reviews/{reviewId}", method = RequestMethod.GET)
     public @ResponseBody
     List<?> listCommentsForReview(@PathVariable("reviewId") Long reviewId) {
-        //throw new HttpServerErrorException(HttpStatus.NOT_IMPLEMENTED);
 
         Optional<Review> review = reviewRepo.findById(reviewId);
         if (review.isPresent()) {

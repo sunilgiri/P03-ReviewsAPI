@@ -39,7 +39,6 @@ public class ReviewsController {
     @RequestMapping(value = "/reviews/products/{productId}", method = RequestMethod.POST)
     public ResponseEntity<?> createReviewForProduct(@Valid @RequestBody Review review,
             @PathVariable("productId") Long productId) {
-        //throw new HttpServerErrorException(HttpStatus.NOT_IMPLEMENTED);
 
         Optional<Product> product = productRepo.findById(productId);
         if (product.isPresent()) {
@@ -59,7 +58,6 @@ public class ReviewsController {
     @RequestMapping(value = "/reviews/products/{productId}", method = RequestMethod.GET)
     public ResponseEntity<List<?>> listReviewsForProduct(
             @PathVariable("productId") Long productId) {
-        // throw new HttpServerErrorException(HttpStatus.NOT_IMPLEMENTED);
 
         Optional<Product> product = productRepo.findById(productId);
         if (product.isPresent()) {

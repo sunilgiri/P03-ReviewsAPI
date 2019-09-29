@@ -6,15 +6,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
-import org.hibernate.validator.constraints.pl.NIP.List;
 
 @Entity
 public class Comment {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String loginId;
+
+    private String login;
 
     @NotNull
     private String text;
@@ -34,11 +34,11 @@ public class Comment {
     }
 
     public String getLoginId() {
-        return loginId;
+        return login;
     }
 
-    public void setLoginId(String loginId) {
-        this.loginId = loginId;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getText() {

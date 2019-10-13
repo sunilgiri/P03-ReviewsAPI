@@ -33,7 +33,7 @@ public class Comment {
         this.id = id;
     }
 
-    public String getLoginId() {
+    public String getLogin() {
         return login;
     }
 
